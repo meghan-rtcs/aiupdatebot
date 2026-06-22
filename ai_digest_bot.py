@@ -511,8 +511,8 @@ def main() -> int:
     html_body = render_html(digest, pretty_date)
 
     n = len(digest.get("items", []))
-    subject = (f"🛰️ AI Digest — {n} new thing{'s' if n != 1 else ''} ({pretty_date})"
-               if n else f"🛰️ AI Digest — quiet day ({pretty_date})")
+    subject = (f"RTCS AI Digest — {n} new thing{'s' if n != 1 else ''} ({pretty_date})"
+               if n else f"RTCS AI Digest — quiet day ({pretty_date})")
 
     print("  step 4/4: sending …")
     send_email(subject, html_body, EMAIL_TO)
